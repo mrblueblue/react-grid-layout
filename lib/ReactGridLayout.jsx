@@ -357,7 +357,7 @@ class ReactGridLayout extends React.Component {
    */
   processGridItem(child: ReactElement): ?ReactElement {
     if (!child.key) return;
-    var i = parseInt(child.key, 10);
+    var i = child.key
     var l = getLayoutItem(this.state.layout, i);
     if (!l) return;
 
