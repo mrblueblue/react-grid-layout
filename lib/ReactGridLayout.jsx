@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import shallowEquals from 'shallow-equals';
 import {bottom, clone, compact, getLayoutItem, moveElement,
         synchronizeLayoutWithChildren, validateLayout} from './utils';
 import GridItem from './GridItem';
@@ -171,7 +172,9 @@ class ReactGridLayout extends React.Component {
   componentDidUpdate(prevProps: Object, prevState: Object) {
     // Call back so we can store the layout
     // Do it only when a resize/drag is not active, otherwise there are way too many callbacks
-    if (this.state.layout !== prevState.layout && !this.state.activeDrag) {
+    if (shallowEquals(this.state.layout, prevState.layout) &&
+        this.state.layout.length &&
+        !this.state.activeDrag) {
       this.props.onLayoutChange(this.state.layout, this.state.layouts);
     }
   }

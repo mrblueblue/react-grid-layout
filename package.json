@@ -36,7 +36,8 @@
     "deep-equal": "^1.0.1",
     "object-assign": "^4.0.1",
     "react-draggable": "^1.1.1",
-    "react-resizable": "^1.0.1"
+    "react-resizable": "^1.0.1",
+    "shallow-equals": "0.0.0"
   },
   "devDependencies": {
     "babel": "5.x",
@@ -62,10 +63,6 @@
     "style-loader": "^0.13.0",
     "webpack": "^1.12.6",
     "webpack-dev-server": "^1.12.1"
-  },
-  "peerDependencies": {
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
