@@ -352,6 +352,7 @@ var ReactGridLayout = React.createClass({
 
     return (
       <GridItem
+        className={child.props.className}
         containerWidth={this.state.width}
         cols={this.props.cols}
         margin={this.props.margin}
