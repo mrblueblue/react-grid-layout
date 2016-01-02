@@ -43,9 +43,8 @@ class ResponsiveReactGridLayout extends React.Component {
     layouts: function(props, propName, _componentName) {
       React.PropTypes.object.isRequired.apply(this, arguments);
 
-      let layouts = props.layouts;
-      Object.keys(layouts).map(function(k) {
-        validateLayout(layouts[k], 'layouts.' + k);
+      Object.keys(props.layouts).map(function(k) {
+        validateLayout(props.layouts[k], 'layouts.' + k);
       });
     },
 
